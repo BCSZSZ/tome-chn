@@ -2,10 +2,10 @@ local _M = loadPrevious(...)
 
 registerTalentTranslation{
 	id = "T_TENTACLED_WINGS",
-	name = "Tentacled Wings",
+	name = "触手之翼",
 	info = function(self, t)
-		return ([[You project tentacles in a cone of radius %d in front of you.
-		Any foes caught inside is grappled by the tentacles and suffers %d%% weapon damage as blight, if the attack hits the creature is also pulled towards you.]]):
+		return ([[你向前方半径 的锥形区域内发射触手。
+		Any任何范围内的敌人将会被触手缠绕，并受到%d%%点武器伤害，伤害属性为枯萎。如果攻击if the attack hits the creature is also pulled towards you.]]):
 		format(self:getTalentRange(t), damDesc(self, DamageType.BLIGHT, t.getDamage(self, t) * 100))
 	end,
 }
